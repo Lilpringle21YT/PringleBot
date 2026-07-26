@@ -1,3 +1,10 @@
+import random
+
+@bot.command()
+async def coinflip(ctx):
+    result = random.choice(["Heads", "Tails"])
+    await ctx.send(f"The coin landed on: **{result}**!")
+
 import discord
 from discord.ext import commands
 
