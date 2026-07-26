@@ -1,16 +1,16 @@
-import random
-
-@bot.command()
-async def coinflip(ctx):
-    result = random.choice(["Heads", "Tails"])
-    await ctx.send(f"The coin landed on: **{result}**!")
-
 import discord
 from discord.ext import commands
 
 intents = discord.Intents.default()
 intents.message_content = True
 bot = commands.Bot(command_prefix="!", intents=intents)
+
+import random
+
+@bot.command()
+async def coinflip(ctx):
+    result = random.choice(["Heads", "Tails"])
+    await ctx.send(f"The coin landed on: **{result}**!")
 
 import random
 
